@@ -1,0 +1,7 @@
+#wrap {}
+#wrap .top_banner {background:#000; display:flex; flex-direction:row; justify-content:center; align-items:center; height:40px; padding:10px; position:relative;}
+#wrap .top_banner a {color:#fff; font-size: 0.75rem;}
+#wrap .top_banner .top_btn {
+    width:24px; height:24px; position:absolute; transform:translateY(-50%); right:46%; top:50%; border:none;
+    background:url(../images/close.png) no-repeat center / cover ; 
+}
