@@ -1,7 +1,87 @@
 #wrap {}
-#wrap .top_banner {background:#000; display:flex; flex-direction:row; justify-content:center; align-items:center; height:40px; padding:10px; position:relative;}
-#wrap .top_banner a {color:#fff; font-size: 0.75rem;}
+#wrap .top_banner {
+    background:#000; display:flex; flex-direction:row; justify-content:center; align-items:center; 
+    height:40px; padding:10px; position:relative; gap:5px; z-index:1000; position:fixed; width:100%; top:0;
+}
+#wrap .top_banner a {color:#fff; font-size: 0.75rem; text-decoration:none; white-space:nowrap;}
 #wrap .top_banner .top_btn {
-    width:24px; height:24px; position:absolute; transform:translateY(-50%); right:46%; top:50%; border:none;
+    width:20px; height:20px; border:none;
     background:url(../images/close.png) no-repeat center / cover ; 
 }
+/* ----------------------------------------------------------------------1.팝업창 */
+#wrap header {
+    background:#fff; width:100%; height:93px; display:flex; flex-direction:row; justify-content:space-between; align-items:center;
+    padding:0 100px; position:fixed; top:40px; left:0; z-index:999;
+    /* 배경색 부드럽게 변하도록 전환 효과 */
+    transition:background-color 0.3s ease;
+}
+/* 스크롤 시 적용될 클래스 */
+#wrap header.scrollde {
+    background:rgba(255,255,255,0.5); box-shadow:0 2px rgba(0,0,0,0.05);
+}
+#wrap .icon_logo {display:flex; flex-direction:row; align-items:center;}
+#wrap header .icon_logo a p {width:40px; height:40px; background:url(../images/menu.png) no-repeat center; margin-right:20px;}
+#wrap header .icon_logo h1 {width:198px; height:41px; background:url(../images/logo.png) no-repeat center;}
+/* ----------------------------------------------------------------------2.헤더 -> 전체목록 + 로고 */
+#wrap header .gnb {}
+#wrap header .gnb ul {display:flex; justify-content:center; align-items:center;}
+#wrap header .gnb ul li {margin-right:30px;}
+#wrap header .gnb ul li a {}
+/* ----------------------------------------------------------------------2.헤더 -> 카데고리 */
+#wrap header .icon {display:flex; align-items:center;}
+#wrap header .icon span {}
+#wrap header .icon .box {
+    width:157px; height:30px; border:1px solid #ddd; border-radius:30px; padding:5px 10px; color:#ddd;
+    display:flex; justify-content:flex-start; align-items:center; margin-right:15px;
+}
+#wrap header .icon .box .search {
+    width:20px; height:20px; display:inline-block;
+    background:url(../images/icon_search.png) no-repeat center; 
+
+}
+#wrap header .icon .like,
+#wrap header .icon .cart,
+#wrap header .icon .user {width:20px; height:20px; display:inline-block;}
+#wrap header .icon .like {background:url(../images/icon_like.png) no-repeat center; margin-right:10px;}
+#wrap header .icon .cart {background:url(../images/icon_cart.png) no-repeat center; margin-right:10px;}
+#wrap header .icon .user {background:url(../images/icon_user.png) no-repeat center;}
+/* ----------------------------------------------------------------------2.헤더 -> 우측 아이콘 (검색, 찜, 장바구니, 로그인) */
+#wrap main {width:100%; overflow:hidden; margin-top:93px;}
+#wrap main .swiper.main_slider {width:100%; height:884px;} /* 높이를 다 채워지지않음 -> 물어볼것 */
+#wrap main .swiper.main_slider .swiper-wrapper {display:flex; justify-content:flex-start; align-items:center; width:100%; height:100%;}
+#wrap main .swiper.main_slider .swiper-wrapper .swiper-slide {flex:0 0 100%; width:100%; height:100%; box-sizing:border-box;}
+/* ----------------------------------------------------------------------3.슬라이드 공통부분 */
+#wrap main .swiper.main_slider .swiper-wrapper .swiper-slide.slide1 {background:url(../images/bg1.jpg) no-repeat center / contain; background-position: top center;}
+#wrap main .swiper.main_slider .swiper-wrapper .swiper-slide.slide2 {background:url(../images/bg2.jpg) no-repeat center / contain; background-position: top center;}
+#wrap main .swiper.main_slider .swiper-wrapper .swiper-slide.slide3 {background:url(../images/bg3.jpg) no-repeat center / contain; background-position: top center;}
+#wrap main .swiper.main_slider .swiper-pagination {bottom:22%;}
+#wrap main .swiper.main_slider .swiper-pagination-bullet {width:10px; height:10px; background:#ddd; opacity:1; transition:all 0.3s;}
+#wrap main .swiper.main_slider .swiper-pagination-bullet-active {background:#fff; width:10px; border-radius:50%; opacity:1;}
+/* ----------------------------------------------------------------------3-1 개별슬라이드 + 페이지 점 */
+#wrap main .swiper.main_slider .swiper-button-next::after,
+#wrap main .swiper.main_slider .swiper-button-prev::after {content:none !important; display:none !important;}
+#wrap main .swiper.main_slider .swiper-button-prev,
+#wrap main .swiper.main_slider .swiper-button-next {
+    width:50px; height:50px; top:50%; transform:translateY(-50%); background:none; z-index:10;
+    /*기본 배경 이미지와 색상 완전히 제거*/
+    background: none !important; 
+    background-image: none !important; /* 이미지 경로를 포함하는 속성도 제거 */
+    color: transparent !important;
+}
+#wrap main .swiper.main_slider .swiper-button-prev {
+    left:30px; /* right:auto; */ background:url(../images/next.png) no-repeat center / cover !important;;
+}
+#wrap main .swiper.main_slider .swiper-button-next {
+    right:30px; /* left:auto; */ background:url(../images/next.png) no-repeat center / cover !important;;
+    transform:scaleX(-1) translateY(-50%); 
+}
+/* ------------------------------------------------------------------------------------3-2. 이전+다음 버튼, 3행 끝 */
+/* ----------------------------------------------------------------------------------4.new (시작)*/
+#wrap main #new {background:pink; padding:0 100px; height:100vh;}
+#wrap main #new .title_bar {}
+#wrap main #new .title_bar h2 {font-size:1.875rem; font-weight:600; margin-bottom:30px;}
+#wrap main #new .title_bar .sub {}
+#wrap main #new .title_bar .sub ul {display:flex; flex-direction:row; justify-content:flex-start; align-items:center;}
+#wrap main #new .title_bar .sub ul li {}
+#wrap main #new .title_bar .sub ul li a {margin-right:15px;}
+#wrap main #new .title_bar .sub ul li .check {font-size:1.25rem; font-weight:800; border-bottom:2px solid #f00; padding-bottom:5px;}
