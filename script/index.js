@@ -45,3 +45,15 @@ const bgSwiper = new Swiper('.swiper.main_slider',{
             prevEl: '.swiper-button-prev' 
         },
 })
+
+//좋아요 버튼 클릭 시 
+const wishBtn = document.querySelectorAll('.wish_btn')
+//console.log(wishBtn); 확인
+wishBtn.forEach(button => {
+    button.addEventListener('click',(e)=>{
+        e.preventDefault();
+        //클릭할때 active
+        button.classList.toggle('wish_btn-active');
+        console.log('wish button toggled', button.classList.contains('wish_btn-active'))
+    })
+})
