@@ -69,10 +69,10 @@
     color: transparent !important;
 }
 #wrap main .swiper.main_slider .swiper-button-prev {
-    left:30px; /* right:auto; */ background:url(../images/next.png) no-repeat center / cover !important;;
+    left:30px; background:url(../images/next.png) no-repeat center / cover !important;
 }
 #wrap main .swiper.main_slider .swiper-button-next {
-    right:30px; /* left:auto; */ background:url(../images/next.png) no-repeat center / cover !important;;
+    right:30px; background:url(../images/next.png) no-repeat center / cover !important;
     transform:scaleX(-1) translateY(-50%); 
 }
 /* ---------------------------------------------------------------------------------------------------------------------------3-2. 이전+다음 버튼, 3행 끝 */
@@ -86,27 +86,21 @@
 #wrap main #new .title_bar .sub ul li a {margin-right:15px;}
 #wrap main #new .title_bar .sub ul li .check {font-size:1.25rem; font-weight:800; border-bottom:2px solid #f00; padding-bottom:5px;}
 /* ------------------------------------------------------------------------------------------------------------------------------4-1 카테고리 */
-#wrap main #new .product {display:flex; justify-content:space-between; gap:30px; padding:0 100px;}
+#wrap main #new .product {display:flex; justify-content:space-between; gap:30px;}
 /* ------------------------------------------------------------------공통 슬라이드 부분 */
-#wrap main #new .product .swiper {}
-#wrap main #new .product .swiper .swiper-wrapper {border:1px solid red; overflow:hidden;}
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide {width:512px; height:643px; margin-right:30px;}
+#wrap main #new .product .swiper #main {}
+#wrap main #new .product .swiper .swiper-wrapper {}
+#wrap main #new .product .swiper .swiper-wrapper .swiper-slide {width:512px; height:643px; margin-right:30px; position:relative;}
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item1 img,
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item2 img,
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item3 img,
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item4 img {width:100%; height:auto;}
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item1 .wish_btn,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item2 .wish_btn,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item3 .wish_btn,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item4 .wish_btn {
-    width:20px; height:20px; position:absolute; top:25px; left:467px;
-    background:url(../images/icon_like.png) no-repeat center;
+/* 큰이미지 버튼 */
+#wrap main #new .product .swiper .swiper-wrapper .swiper-slide .wish_btn {
+    width:20px; height:20px; position:absolute; top:25px; right:25px; background:url(../images/icon_like.png) no-repeat center / 100% 100%; z-index:99;
 }
 /* 클릭시 찜하기 버튼 활성화 */
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item1 .wish_btn-active,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item2 .wish_btn-active,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item3 .wish_btn-active,
-#wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item4 .wish_btn-active  {background:url(../images/icon_heart.png) no-repeat center;}
+#wrap main #new .product .swiper .swiper-wrapper .swiper-slide .wish_btn-active {background:url(../images/icon_heart.png) no-repeat center / 100% 100%;}
 /* ------------------------------------------------------------------------------------------------------------------------------------개별 슬라이드 부분 */
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item1 {}
 #wrap main #new .product .swiper .swiper-wrapper .swiper-slide.item2 {}
@@ -118,14 +112,40 @@
 #wrap main .product .product_small .txt h1 {font-size:1.5rem; font-weight:600; margin:41px 0 20px;}
 #wrap main .product .product_small .txt p {font-size:0.875rem; line-height:150%; letter-spacing:0.2px; margin-bottom:90px;}
 #wrap main .product .product_small .txt .pick {font-size:0.875rem; margin-bottom:10px;}
-#wrap main .product .product_small .swiper-slide {width:681px; height:348px; margin-right:20px;}
-#wrap main .product .product_small .swiper .swiper-wrapper.sub_small {border:5px solid red;}
-#wrap main .product .product_small .swiper-slide .small_pick {width:197px; height:277px;}
+#wrap main .product .product_small .swiper-slide {}
+#wrap main #new .product .product_small #small_list .swiper-wrapper.sub_small {width:681px; padding-top:5px;}
+#wrap main .product .product_small .swiper-slide .small_pick {width:100%; position:relative;}
 #wrap main .product .product_small .swiper-slide .small_pick img {width:100%;}
-#wrap main .product .product_small .swiper-slide .small_pick img .wish_btn {}
+/* 작은 이미지 버튼 */
+#wrap main .product .product_small .swiper-slide .small_pick .wish_btn {
+    width:16px !important; height:16px !important; position:absolute; top:15px !important; right:15px !important; left:auto !important; z-index:30 !important;
+    background:url(../images/icon_like.png) no-repeat center / 100% 100%;
+}
+#wrap main .product .product_small .swiper-slide .small_pick .wish_btn-active {background:url(../images/icon_heart.png) no-repeat center / 100% 100%;}
 #wrap main .product .product_small .swiper-slide .info {}
-#wrap main .product .product_small .swiper-slide .info .name {}
-#wrap main .product .product_small .swiper-slide .info .price_group {}
-#wrap main .product .product_small .swiper-slide .info .price_group .discount {}
+#wrap main .product .product_small .swiper-slide .info .name {margin-bottom:8px;}
+#wrap main .product .product_small .swiper-slide .info .price_group {display:flex; flex-direction:row; align-items:center;}
+#wrap main .product .product_small .swiper-slide .info .name,
+#wrap main .product .product_small .swiper-slide .info .price_group .discount,
+#wrap main .product .product_small .swiper-slide .info .price_group .price {font-size:0.875rem; margin-right:5px;}
+#wrap main .product .product_small .swiper-slide .info .price_group .discount {color:#EB5E3E;}
 #wrap main .product .product_small .swiper-slide .info .price_group .price {}
-#wrap main .product .product_small .swiper-slide .info .price_group .original {}
+#wrap main .product .product_small .swiper-slide .info .price_group .original {font-size:0.75rem;}
+#wrap main .product .product_small .swiper-slide .info .price_group .original del {color:#aaa;}
+#wrap main .product .product_small .swiper .small-prev::after,
+#wrap main .product .product_small .swiper .small-next::after {content:none !important; display:none !important;}
+#wrap main .product .product_small .swiper .small-prev,
+#wrap main .product .product_small .swiper .small-next {
+    width:20px; height:20px; position:absolute; top:175px;
+    background: none !important; 
+    background-image: none !important; /* 이미지 경로를 포함하는 속성도 제거 */
+    color: transparent !important;
+}
+#wrap main .product .product_small .swiper .small-prev {
+    left:10px; background:url(../images/icon_small_next.png) no-repeat center / cover !important; 
+    transform:translateY(-50%);
+}
+#wrap main .product .product_small .swiper .small-next {
+    right:10px; background:url(../images/icon_small_next.png) no-repeat center / cover !important; 
+    transform:scaleX(-1) translateY(-50%);
+}

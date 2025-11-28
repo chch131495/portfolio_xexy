@@ -57,3 +57,25 @@ wishBtn.forEach(button => {
         console.log('wish button toggled', button.classList.contains('wish_btn-active'))
     })
 })
+
+//4행 큰 이미지 상품 슬라이드
+const mainSwiper = new Swiper('#main', {
+    //한번에 보여줄 슬라이드 수
+    slidesPerView:2,
+    //슬라이드 사이의 간격
+    spaceBetween: 30,
+})
+
+
+//4행 작은 이미지 상품 슬라이드
+const smallListSwiper = new Swiper('#small_list',{
+    //한 번에 보여줄 슬라이드 개수
+    slidesPerView:3,
+    //슬라이드 사이의 간격
+    spaceBetween:10,
+    
+    navigation: { 
+        nextEl: '.swiper-button-next.small-next', 
+        prevEl: '.swiper-button-prev.small-prev' 
+    },
+})
