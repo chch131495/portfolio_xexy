@@ -1,3 +1,7 @@
+@font-face {
+    font-family:'Playfair Display';
+    src:url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf)  format('truetype');
+}
 #wrap {}
 #wrap .top_banner {
     background:#000; display:flex; flex-direction:row; justify-content:center; align-items:center; 
@@ -77,7 +81,7 @@
 }
 /* ---------------------------------------------------------------------------------------------------------------------------3-2. 이전+다음 버튼, 3행 끝 */
 /* ----------------------------------------------------------------------------------------------------------------------------4.new (시작)*/
-#wrap main #new {border:2px solid red; padding:100px; height:100vh;}
+#wrap main #new {padding:100px; height:100vh; margin-bottom:50px;}
 #wrap main #new .title_bar {}
 #wrap main #new .title_bar h2 {font-size:1.875rem; font-weight:600; margin-bottom:30px;}
 #wrap main #new .title_bar .sub {}
@@ -123,7 +127,7 @@
 }
 #wrap main .product .product_small .swiper-slide .small_pick .wish_btn-active {background:url(../images/icon_heart.png) no-repeat center / 100% 100%;}
 #wrap main .product .product_small .swiper-slide .info {}
-#wrap main .product .product_small .swiper-slide .info .name {margin-bottom:8px;}
+#wrap main .product .product_small .swiper-slide .info .name {margin:10px 0 8px;}
 #wrap main .product .product_small .swiper-slide .info .price_group {display:flex; flex-direction:row; align-items:center;}
 #wrap main .product .product_small .swiper-slide .info .name,
 #wrap main .product .product_small .swiper-slide .info .price_group .discount,
@@ -149,3 +153,142 @@
     right:10px; background:url(../images/icon_small_next.png) no-repeat center / cover !important; 
     transform:scaleX(-1) translateY(-50%);
 }
+/* --------------------------------------------------------------------------------------------------------------------------5.3행 광고 */
+#wrap main .ad {display:flex; flex-direction:row; justify-content:center; align-items:center; width:100%; height:855px;}
+#wrap main .ad .left_pick {width:50%; height:100%;}
+#wrap main .ad .left_pick .txt_ad {background:url(../images/ad001.jpg) no-repeat center / cover; width:100%; height:100%; text-align:center; padding-top:300px;}
+#wrap main .ad .left_pick .txt_ad h1,
+#wrap main .ad .left_pick .txt_ad p,
+#wrap main .ad .left_pick .txt_ad a  button {color:#fff;}
+#wrap main .ad .left_pick .txt_ad h1 {font-size:2.5rem; font-weight:800; margin-bottom:30px;}
+#wrap main .ad .left_pick .txt_ad p {font-size:1.25rem; letter-spacing:-2px; margin-bottom:68px;}
+#wrap main .ad .left_pick .txt_ad a {}
+#wrap main .ad .left_pick .txt_ad a button {font-size:1.125rem; border:1px solid #fff; border-radius:5px; padding:10px;}
+#wrap main .ad .left_pick .txt_ad a button:hover {background:rgba(255,255,255,0.5);}
+#wrap main .ad .right_pick {width:50%; height:100%;}
+#wrap main .ad .right_pick .txt_ad {
+    background:linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 50%), linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%),
+    linear-gradient(to right, rgba(0,0,0,0.6), transparent 50%), linear-gradient(to left, rgba(0,0,0,0.6), transparent 50%),
+    url(../images/ad002.png) no-repeat center / cover;
+    width:100%; height:100%; text-align:center; padding-top:303px;
+    transition: opacity 0.5s ease;
+}
+#wrap main .ad .right_pick .txt_ad:hover {opacity:0.5;}
+#wrap main .ad .right_pick .txt_ad a {font-size:6.25rem; line-height:130%; font-weight:600; font-family:'Playfair Display'; color:#F5F2E8;}
+/* --------------------------------------------------------------------------------------------------------------------------5.4행 베스트 품목 */
+#wrap main .best {padding:100px; text-align:center;}
+#wrap main .best .txt_nav {}
+#wrap main .best .txt_nav h1 {font-size:1.875rem; font-weight:600; margin-bottom:30px; text-align:start;}
+#wrap main .best .txt_nav .best_nav {}
+#wrap main .best .txt_nav .best_nav ul {display:flex; flex-direction:row; align-items:center ; margin-bottom:30px;}
+#wrap main .best .txt_nav .best_nav ul li {margin-right:20px;}
+#wrap main .best .txt_nav .best_nav ul li a {}
+#wrap main .best .txt_nav .best_nav ul li .woman {font-size:1.125rem; font-weight:800; padding-bottom:5px; border-bottom:1px solid #EB5E3E;}
+#wrap main .best .best_list {}
+#wrap main .best .best_list .list_top,
+#wrap main .best .best_list .list_bottom {width:1720px; height:614px; display:flex; flex-direction:row; justify-content:center; align-items:center; margin-bottom:50px;}
+#wrap main .best .best_list .list_top .top1,
+#wrap main .best .best_list .list_bottom .bottom1 {position:relative; margin-right:10px;}
+#wrap main .best .best_list .list_top .top1 .img_btn,
+#wrap main .best .best_list .list_bottom .bottom1 .img_btn {height:546px; margin-bottom:10px;}
+#wrap main .best .best_list .list_top .top1 img,
+#wrap main .best .best_list .list_bottom .bottom1 img {width:100%; height:100%;}
+#wrap main .best .best_list .list_top .top1 .wish_btn,
+#wrap main .best .best_list .list_bottom .bottom1 .wish_btn {width:16px; height:16px; position:absolute; top:20px; right:20px; background:url(../images/icon_like.png) no-repeat center / cover; z-index:99;}
+#wrap main .best .best_list .list_top .top1 .wish_btn-active,
+#wrap main .best .best_list .list_bottom .bottom1 .wish_btn-active {background:url(../images/icon_heart.png) no-repeat center / cover;}
+#wrap main .best .best_list .list_top .list_info {}
+#wrap main .best .best_list .list_top .list_info .top,
+#wrap main .best .best_list .list_bottom .list_info .bottom {display:flex; flex-direction:row; justify-content:space-between; align-items:center; margin-bottom:10px;}
+#wrap main .best .best_list .list_top .list_info .top p,
+#wrap main .best .best_list .list_bottom .list_info .bottom p {font-size:1.125rem;}
+#wrap main .best .best_list .list_top .list_info .top button,
+#wrap main .best .best_list .list_bottom .list_info .bottom button {width:20px; height:20px;}
+#wrap main .best .best_list .list_top .list_info .top button img,
+#wrap main .best .best_list .list_bottom .list_info .bottom button img {width:100%; height:100%;}
+#wrap main .best .best_list .list_top .list_info .price,
+#wrap main .best .best_list .list_bottom .list_info .price {display:flex; flex-direction:row; align-items:center;}
+#wrap main .best .best_list .list_top .list_info .price .dis,
+#wrap main .best .best_list .list_bottom .list_info .price .dis {color:#f00;}
+#wrap main .best .best_list .list_top .list_info .price p,
+#wrap main .best .best_list .list_bottom .list_info .price p {font-size:0.875rem; margin-right:5px;}
+#wrap main .best .best_list .list_top .list_info .price p del,
+#wrap main .best .best_list .list_bottom .list_info .price p del {font-size:0.75rem; color:#aaa;}
+#wrap main .best .btn {border:1px solid #000; border-radius:5px; width:105px; height:45px; font-size:1.125rem; padding:10px;}
+#wrap main .best .btn:hover {background:rgba(200,200,200,0.5);}
+/* --------------------------------------------------------------------------------------------------------------------------5.5행 카테고리(스포츠) */
+#wrap main .category {width:100%; height:982px;}
+#wrap main .category .set {background:#000; width:100%; height:100%; padding:100px;}
+#wrap main .category .set .txt {padding:50px 44px 20px; display:flex; flex-direction:row; justify-content:space-between; align-items:center; }
+#wrap main .category .set .txt h1 {font-size:1.75rem; font-weight:600; color:#fff;}
+#wrap main .category .set .txt .btn_tag {font-size:1.5rem;}
+#wrap main .category .set .txt .btn_tag .wom,
+#wrap main .category .set .txt .btn_tag .man {color:#fff;}
+#wrap main .category .set .txt .btn_tag .wom {margin-right:10px;}
+#wrap main .category .set .txt .btn_tag .wom-active {border-bottom:1px solid #f00; padding-bottom:5px;}
+#wrap main .category .set .txt .btn_tag .man-active {border-bottom:1px solid #f00; padding-bottom:5px;}
+/* --------------------------------------------------------------------------------5-1 여성&남성 공통 */
+#wrap main .category .set .sport_w,
+#wrap main .category .set .sport_m {width:1720px; height:693px; display:flex; flex-direction:row; justify-content:center; align-items:center;}
+#wrap main .category .set .sport_w a,
+#wrap main .category .set .sport_m a {display:block; width:400px; height:693px; border-radius:20px; margin-right:20px;}
+#wrap main .category .set .sport_w .run {background:url(../images/sport001.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_w .golf {background:url(../images/sport002.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_w .inner {background:url(../images/sport003.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_w .swim {background:url(../images/sport004.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_w .run p, 
+#wrap main .category .set .sport_w .golf p,
+#wrap main .category .set .sport_m .run p,
+#wrap main .category .set .sport_m .golf p {position:absolute; font-size:2.375rem; font-weight:800; color:#fff; left:165px; bottom:102px;}
+#wrap main .category .set .sport_w .inner p,
+#wrap main .category .set .sport_w .swim p,
+#wrap main .category .set .sport_m .inner p,
+#wrap main .category .set .sport_m .swim p {position:absolute; font-size:2.375rem; font-weight:800; color:#fff; left:134px; bottom:102px;}
+/* ---------------------------------------------------------------------------------5-2 남성 */
+#wrap main .category .set .sport_m {display:none;}
+#wrap main .category .set .sport_m a {}
+#wrap main .category .set .sport_m .run {background:url(../images/mans001.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_m .golf {background:url(../images/mans002.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_m .inner {background:url(../images/mans003.jpg) no-repeat center / cover; position:relative;}
+#wrap main .category .set .sport_m .swim {background:url(../images/mans004.jpg) no-repeat center / cover; position:relative;}
+/* --------------------------------------------------------------------------------------------------------------------------6.6행 인스타그램 */
+#wrap main .style {border:1px solid red; padding:195px 100px;}
+#wrap main .style .style_list {background:pink;}
+#wrap main .style .style_list .txt {display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-end; margin-bottom:10px;}
+#wrap main .style .style_list .txt h1 {font-size:1.875rem; font-weight:600; margin-right:15px;}
+#wrap main .style .style_list .txt p {}
+#wrap main .style .swiper {}
+#wrap main .style .swiper #ig {}
+#wrap main .style .swiper .swiper-wrapper {}
+#wrap main .style .swiper .swiper-wrapper.ig_list {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick {border:1px solid red; width:381px; height:743px; border-radius:20px; overflow:hidden;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick img {position:relative;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick p {
+    width:99px; height:34px; border-radius:10px 10px 0 0; background:#F5F5F5; position:absolute; text-align:center;
+    padding:10px; font-size:0.875rem; top:482px; right:31px; opacity:50;
+}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick p strong {color:#f00;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick button {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a img {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .name {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group p {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .discount {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .price {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .original {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a img {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .name {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group p {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .discount {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .price {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .original {}

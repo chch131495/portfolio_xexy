@@ -79,3 +79,39 @@ const smallListSwiper = new Swiper('#small_list',{
         prevEl: '.swiper-button-prev.small-prev' 
     },
 })
+
+//카테고리 클릭시 변경
+//카테고리 여성, 남성 버튼
+const btnW = document.querySelector('.btn_tag .wom')
+const btnM = document.querySelector('.btn_tag .man')
+//카테고리 스포츠 여성, 남성
+const sportW = document.querySelector('.set .sport_w')
+const sportM = document.querySelector('.set .sport_m')
+console.log(btnW, btnM, sportW, sportM) //콘솔확인
+
+//카테고리 여성 버튼 클릭시
+btnW.addEventListener('click',(e)=>{
+    //a태그 기본 동작 방지
+    e.preventDefault();
+    //여성 버튼 클릭시 활성화
+    btnW.classList.add('wom-active');
+    //여성 버튼 클릭시 남성버튼 숨김
+    btnM.classList.remove('man-active')
+    //여성 카테고리 보이기
+    sportW.style.display = 'flex';
+    //남성 카테고리 숨기기
+    sportM.style.display = 'none'
+})
+//카테고리 남성 버튼 클릭시
+btnM.addEventListener('click',(e)=>{
+    //a태그 기본 동작 방지
+    e.preventDefault();
+    //남성 버튼 클릭시 활성화
+    btnM.classList.add('man-active');
+    //남성 버튼 클릭시 여성버튼 숨김
+    btnW.classList.remove('wom-active')
+    //남성 카테고리 보이기
+    sportM.style.display = 'flex';
+    //여성 카테고리 숨기기
+    sportW.style.display = 'none';
+})
