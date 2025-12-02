@@ -345,22 +345,39 @@
 #wrap main .ad_bnr .txt_sub p {font-size:1.125rem;}
 #wrap main .ad_bnr .txt_sub .txt {margin-right:10px;}
 /* --------------------------------------------------------------------------------------------------------------------------8.품목*/
-#wrap main .kind {border:1px solid red; width:100%; height:1010px; padding:0 100px; margin:0 auto;}
-#wrap main .kind .kind_list {width:1566px; height:666px; margin-top:172px; display:flex; flex-direction:row; justify-content:center; align-items:center; position:relative; border:1px solid blue;}
+#wrap main .kind {width:100%; height:1010px; padding:0 100px; margin:0 auto;}
+#wrap main .kind .kind_list {width:100%; height:666px; margin-top:172px; display:flex; flex-direction:row; justify-content:center; align-items:center; position:relative;}
 #wrap main .kind .kind_list .shoes,
 #wrap main .kind .kind_list .bag {border-radius:5px; width:50%; height:100%;}
-#wrap main .kind .kind_list .shoes {background:url(../images/kind01.jpg) no-repeat center / 100% 100%;}
+/* -----------------------------------------------슈즈 블러 처리부분 */
+#wrap main .kind .kind_list .shoes {background:url(../images/kind01.jpg) no-repeat center / 100% 100%; margin-right:10px; position:relative; overflow:hidden;}
+#wrap main .kind .kind_list .shoes::before {
+    content:''; position:absolute; inset:0; z-index: 1;
+    background: url(../images/kind01.jpg) no-repeat center / cover;
+}
+#wrap main .kind .kind_list .shoes:hover::before {filter:blur(2px);}
+/* -----------------------------------------------글자 그림자 처리부분 */
 #wrap main .kind .kind_list .shoes .title,
-#wrap main .kind .kind_list .bag .title {display:flex; flex-direction:row; justify-content:center; align-items:center;}
+#wrap main .kind .kind_list .bag .title {
+    display:flex; flex-direction:row; justify-content:center; align-items:center; position:relative; z-index:2;
+    opacity:0.9; text-shadow:0 5px 5px rgba(0,0,0,0.5);  transition:opacity 0.3s ease; 
+}
+#wrap main .kind .kind_list .shoes .title:hover,
+#wrap main .kind .kind_list .bag .title:hover {opacity:1; text-shadow:0 7px 12px rgba(0,0,0,0.6);}
 #wrap main .kind .kind_list .shoes .title h1,
-#wrap main .kind .kind_list .bag .title h1 {font-size:11.25rem; font-weight:800; color:#fff; text-shadow:0 5px 5px rgba(0,0,0,0.5); margin-top:203px;}
+#wrap main .kind .kind_list .bag .title h1 {font-size:11.25rem; font-weight:800; color:#f5f5f5; margin-top:200px;}
 #wrap main .kind .kind_list .shoes .title .one,
 #wrap main .kind .kind_list .bag .title .one {margin-right:135px;}
-#wrap main .kind .kind_list .bag {background:url(../images/kind02.jpg) no-repeat center / 100% 100%;}
-#wrap main .kind .kind_list .bag h1 {}
+#wrap main .kind .kind_list .bag {background:url(../images/kind02.jpg) no-repeat center / 100% 100%; position:relative; overflow:hidden;}
+#wrap main .kind .kind_list .bag::before {
+    content:''; position:absolute; inset:0; z-index: 1;
+    background: url(../images/kind02.jpg) no-repeat center / cover;
+}
+#wrap main .kind .kind_list .bag:hover::before {filter:blur(2px);}
 #wrap main .kind .kind_list .txt {
     bottom:128px; width:991px; height:67px; position:absolute; z-index:5; 
-    background-image:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    background-image:linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 35%, 
+    rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.5) 65%, rgba(0,0,0,0) 100%);
 }
 #wrap main .kind .kind_list .txt p {
     position:absolute; bottom:20px; left:50%; transform: translateX(-50%); white-space: nowrap;
