@@ -115,3 +115,21 @@ btnM.addEventListener('click',(e)=>{
     //여성 카테고리 숨기기
     sportW.style.display = 'none';
 })
+
+//인스타그램 슬라이드
+const ig = new Swiper('#ig', {
+    //슬라이드 간격
+    spaceBetween: 30,
+    //슬라이드 너비 지정
+    slidesPerView: 'auto',
+    //자동 재생
+    autoplay:{
+        delay:2500,
+        //마우스 올리면 자동재생 멈춤
+        pauseOnMouseEnter:true,
+    },
+    pagination:{
+        el:'.swiper-pagination',
+        type: 'progressbar'
+    }
+})

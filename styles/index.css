@@ -252,36 +252,62 @@
 #wrap main .category .set .sport_m .inner {background:url(../images/mans003.jpg) no-repeat center / cover; position:relative;}
 #wrap main .category .set .sport_m .swim {background:url(../images/mans004.jpg) no-repeat center / cover; position:relative;}
 /* --------------------------------------------------------------------------------------------------------------------------6.6행 인스타그램 */
-#wrap main .style {border:1px solid red; padding:195px 100px;}
-#wrap main .style .style_list {background:pink;}
-#wrap main .style .style_list .txt {display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-end; margin-bottom:10px;}
+#wrap main .style {padding:195px 100px;}
+#wrap main .style .style_list {position:relative;}
+#wrap main .style .style_list .txt {display:flex; flex-direction:row; justify-content:flex-start; align-items:flex-end; margin-bottom:15px;}
 #wrap main .style .style_list .txt h1 {font-size:1.875rem; font-weight:600; margin-right:15px;}
 #wrap main .style .style_list .txt p {}
-#wrap main .style .swiper {}
+#wrap main .style .swiper {overflow:visible;}
 #wrap main .style .swiper #ig {}
 #wrap main .style .swiper .swiper-wrapper {}
 #wrap main .style .swiper .swiper-wrapper.ig_list {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick {border:1px solid red; width:381px; height:743px; border-radius:20px; overflow:hidden;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick {width:381px; height:743px; border-radius:20px; overflow:hidden; border:1px solid #b3b3b3;}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick img {position:relative;}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick p {
     width:99px; height:34px; border-radius:10px 10px 0 0; background:#F5F5F5; position:absolute; text-align:center;
-    padding:10px; font-size:0.875rem; top:482px; right:31px; opacity:50;
+    padding:10px; font-size:0.875rem; top:482px; right:30px; opacity:90%;
 }
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick p strong {color:#f00;}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick button {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick button {width:16px; height:16px; background:url(../images/icon_puls.png) no-repeat center / cover;}
+/* -------------------------- 버튼 올렸을때 나오는 정보--------------------------------------- */
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down {position:absolute; top:224px; left:182px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub {
+    width:179px; height:65px; background:#f3f3f3; opacity:0.8; padding:5px;
+    position:relative; display:flex; align-items:center; opacity:0; visibility:hidden; transition:opacity 0.3s, visibility 0.3s;
+}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub {top:-80px; left:0;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub {top:-80px; left:-150px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up:hover .up_sub,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down:hover .down_sub {opacity:1; visibility:visible;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub img,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub img {width:55px; height:55px; object-fit:cover; margin-right:5px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub .num,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub .num {font-size:0.625rem; top:25px; right:20px; padding:0; line-height:130%; text-align:start;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down {position:absolute; top:366px; left:226px;}
+/* -------------------------- 버튼 올렸을때 나오는 정보--------------------------------------- */
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a img {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants {padding:0 10px; margin-bottom:5px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a {display:flex; flex-direction:row; align-items:center; width:100%; margin-top:10px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a img,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a img {width:116px; height:97px; object-fit:cover; margin-right:10px; border-radius:20px;}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .name {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .name,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .name {font-size:0.938rem; margin-bottom:10px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group {display:flex; flex-direction:row; align-items:flex-end;}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group p {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .discount {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .price {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .original {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .discount,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .discount {font-size:0.875rem; color:#EB5E3E; margin-right:5px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group .price,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .price {font-size:0.875rem; margin-right:5px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .top a .top_txt .price_group del,
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group del {font-size:0.75rem; color:#aaa;}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a img {}
@@ -291,4 +317,52 @@
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group p {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .discount {}
 #wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .price {}
-#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group .original {}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .info .pants a .pants_txt .price_group del {}
+/* -----------------이시안 버튼 조정 -----------------------------------------------------------------*/
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up.box1 {top:150px; left:199px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down.box1 {top:393px; left:161px;}
+/* 이시안 -> 버튼에 올렸을때 나오는 정보들 위치 조정 */
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub.sub1 {top:30px; left:-50px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub.sub1 {left:-100px;}
+/* -----------------우기 버튼 조정 -----------------------------------------------------------------*/
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up.box2 {top:169px; left:309px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down.box2 {top:427px; left:76px;}
+/* 우기 -> 버튼에 올렸을때 나오는 정보들 위치 조정 */
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub.sub2 {top:30px; left:-150px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub.sub2 {left:0;}
+/* -----------------김종국 버튼 조정 -----------------------------------------------------------------*/
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up.box4 {top:142px; left:238px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down.box4 {top:339px; left:95px;}
+/* 김종국 -> 버튼에 올렸을때 나오는 정보들 위치 조정 */
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .up .up_sub.sub4 {top:25px; left:-80px;}
+#wrap main .style .swiper .swiper-wrapper .swiper-slide.ig_pick .pick .down .down_sub.sub4 {top:-20px; left:25px;}
+#wrap main .style .swiper .swiper-pagination {background:#ddd; width:371px; height:2px; bottom:-65px; left:0; right:0; top: auto !important; margin:0 auto; z-index:10;}
+#wrap main .style .swiper .swiper-pagination .swiper-pagination-progressbar-fill {background:#000; height:100%;}
+/* --------------------------------------------------------------------------------------------------------------------------7.광고배너*/
+#wrap main .ad_bnr {background:url(../images/ad_bnr01.jpg) no-repeat center / cover; height:234px;}
+#wrap main .ad_bnr h1 {font-size:1.875rem; font-family:'Playfair Display'; font-weight:600; text-align:center; margin-bottom:20px; padding-top:83px;}
+#wrap main .ad_bnr .txt_sub {display:flex; flex-direction:row; justify-content:center; align-items:center;}
+#wrap main .ad_bnr .txt_sub p {font-size:1.125rem;}
+#wrap main .ad_bnr .txt_sub .txt {margin-right:10px;}
+/* --------------------------------------------------------------------------------------------------------------------------8.품목*/
+#wrap main .kind {border:1px solid red; width:100%; height:1010px; padding:0 100px; margin:0 auto;}
+#wrap main .kind .kind_list {width:1566px; height:666px; margin-top:172px; display:flex; flex-direction:row; justify-content:center; align-items:center; position:relative; border:1px solid blue;}
+#wrap main .kind .kind_list .shoes,
+#wrap main .kind .kind_list .bag {border-radius:5px; width:50%; height:100%;}
+#wrap main .kind .kind_list .shoes {background:url(../images/kind01.jpg) no-repeat center / 100% 100%;}
+#wrap main .kind .kind_list .shoes .title,
+#wrap main .kind .kind_list .bag .title {display:flex; flex-direction:row; justify-content:center; align-items:center;}
+#wrap main .kind .kind_list .shoes .title h1,
+#wrap main .kind .kind_list .bag .title h1 {font-size:11.25rem; font-weight:800; color:#fff; text-shadow:0 5px 5px rgba(0,0,0,0.5); margin-top:203px;}
+#wrap main .kind .kind_list .shoes .title .one,
+#wrap main .kind .kind_list .bag .title .one {margin-right:135px;}
+#wrap main .kind .kind_list .bag {background:url(../images/kind02.jpg) no-repeat center / 100% 100%;}
+#wrap main .kind .kind_list .bag h1 {}
+#wrap main .kind .kind_list .txt {
+    bottom:128px; width:991px; height:67px; position:absolute; z-index:5; 
+    background-image:linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+}
+#wrap main .kind .kind_list .txt p {
+    position:absolute; bottom:20px; left:50%; transform: translateX(-50%); white-space: nowrap;
+    font-size:1.875rem; font-weight:800; letter-spacing:18px; color:#E0E0E0; z-index:10;
+}
