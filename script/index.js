@@ -60,10 +60,19 @@ wishBtn.forEach(button => {
 
 //4행 큰 이미지 상품 슬라이드
 const mainSwiper = new Swiper('#main', {
+    //무한 루프
+    loop:true,
     //한번에 보여줄 슬라이드 수
     slidesPerView:2,
     //슬라이드 사이의 간격
     spaceBetween: 30,
+    //슬라이드 전환 속도
+    speed:1000,
+    //자동 재생
+    autoplay:{
+        delay:2000,
+        pauseOnMouseEnter:true,
+    }
 })
 
 
@@ -133,3 +142,24 @@ const ig = new Swiper('#ig', {
         type: 'progressbar'
     }
 })
+
+//광고배너 (끝부분)
+const adBnrSwiper = new Swiper('#smallbnr',{
+    //무한루프
+    loop:true,
+
+    //한번에 보여줄 슬라이드 수
+    slidesPerView:2,
+
+    //슬라이드간격
+    slidesBetween:0,
+
+    //슬라이드 전환 속도
+    speed:1000,
+
+    //자동 재생
+    autoplay:{
+        delay:2000,
+        pauseOnMouseEnter:true,
+    }
+}) 

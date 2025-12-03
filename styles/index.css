@@ -2,6 +2,10 @@
     font-family:'Playfair Display';
     src:url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf)  format('truetype');
 }
+@font-face{
+    font-family:'MaruBuri';
+    src:url(../fonts/MaruBuri/MaruBuri-Regular.ttf) format('truetype');
+}
 #wrap {}
 #wrap .top_banner {
     background:#000; display:flex; flex-direction:row; justify-content:center; align-items:center; 
@@ -383,3 +387,119 @@
     position:absolute; bottom:20px; left:50%; transform: translateX(-50%); white-space: nowrap;
     font-size:1.875rem; font-weight:800; letter-spacing:18px; color:#E0E0E0; z-index:10;
 }
+/* --------------------------------------------------------------------------------------------------------------------------9.리뷰*/
+#wrap main .review {margin:0 auto; width:100%; height:100vh; padding-top:100px;}
+#wrap main .review .real {}
+#wrap main .review .real .real_txt {text-align:center;}
+#wrap main .review .real .real_txt h1 {font-size:1.875rem; font-weight:600; margin-bottom:10px;}
+#wrap main .review .real .real_txt p {font-size:1.25rem; margin-bottom:20px;}
+#wrap main .review .real .push_btn  {display:flex; flex-direction:row; justify-content:flex-end; align-items:center; margin-bottom:20px; padding:0 158px;}
+#wrap main .review .real .push_btn .txt {font-size:0.875rem; margin-right:10px;}
+#wrap main .review .real .push_btn .btn {background:url(../images/icon_plus.png) no-repeat center / cover; width:16px; height:16px;}
+#wrap main .review .real .real_view {padding:0 58px; display:flex; flex-direction:row; justify-content:center; align-items:center;}
+#wrap main .review .real .real_view .view_p {width:386px; height:580px; border-radius:10px; overflow:hidden; border:1px solid #F5F5F5; margin-right:30px;}
+#wrap main .review .real .real_view .view_p .top {width:386px; height:415px;}
+#wrap main .review .real .real_view .view_p .view_txt {padding:0 10px;}
+#wrap main .review .real .real_view .view_p .view_txt .info {border-bottom:1px solid #ddd; padding-bottom:10px;}
+#wrap main .review .real .real_view .view_p .view_txt .info a {display:flex; flex-direction:row; align-items:center;}
+#wrap main .review .real .real_view .view_p .view_txt .info a img {width:65px; height:65px; margin-right:10px;}
+#wrap main .review .real .real_view .view_p .view_txt .info a .txt_g {display:flex; flex-direction:row; justify-content:space-between; align-items:center; width:100%;}
+#wrap main .review .real .real_view .view_p .view_txt .info a .txt_g p {font-size:0.875rem; line-height:150%; letter-spacing:-0.2px;}
+#wrap main .review .real .real_view .view_p .view_txt .info a .txt_g .buy {width:20px; height:20px; background:url(../images/icon_cart.png) no-repeat center /  cover;}
+#wrap main .review .real .real_view .view_p .view_txt .txt {padding-top:10px;}
+#wrap main .review .real .real_view .view_p .view_txt .txt p {}
+#wrap main .review .real .real_view .view_p .view_txt .txt .one {
+    font-size:0.875rem; line-height:150%; letter-spacing:-0.2px; margin-bottom:10px;
+    width:366px; overflow:hidden; text-overflow:ellipsis;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;
+    /* 텍스트 넓이를 넘어가면 숨기고, 줄임표가 일어나는 곳이 두번재 줄이고, 수직정렬을 하는 속성값*/
+}
+#wrap main .review .real .real_view .view_p .view_txt .txt_sub {display:flex; flex-direction:row; justify-content:flex-end; align-items:center;}
+#wrap main .review .real .real_view .view_p .view_txt .txt_sub p {font-size:0.75rem;}
+#wrap main .review .real .real_view .view_p .view_txt .txt_sub .year {margin-right:5px;}
+#wrap main .review .real .real_view .view_p .view_txt .txt_sub .name {}
+/* --------------------------------------------------------------------------------------------------------------------------10.광고배너2 (끝부분) */
+#wrap main .ad_bnr2 {width:100%; height:540px;}
+#wrap main .ad_bnr2 .swiper {margin-top:152px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper {}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper.bnr_g {}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide {width:50%; height:235px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr1 {background:url(../images/ad_bnr02.jpg) no-repeat center / cover; position:relative;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr1 .bnr_sub {text-align:center; margin-top:55px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr1 .bnr_sub h1 {
+    font-family:'Playfair Display'; font-size:2.188rem; font-weight:800; 
+    color:#ff0000; margin-bottom:15px; line-height:130%;
+}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr1 .bnr_sub p {font-size:0.875rem; color:#fff;}
+/* --------------------------------------------------------------------------------------------------------------------------10-1 광고배너2 시작*/
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr2 {background:url(../images/ad_bnr03.jpg) no-repeat center / cover; position:relative;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr2 .bnr_sub {text-align:center; margin-top:50px; position:absolute; left:45%;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr2 .bnr_sub h1 {
+    font-family:'Playfair Display'; font-size:2.188rem; font-weight:800; color:#1C1C1C;
+    line-height:130%; width:176px; 
+}
+/* --------------------------------------------------------------------------------------------------------------------------10-2 광고배너3 시작*/
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr3 {background:url(../images/ad_bnr04.jpg) no-repeat center / cover; position:relative;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr3 .bnr_sub {display:flex; flex-direction:row; justify-content:space-between; align-items:center; margin:91px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr3 .bnr_sub h1 {font-size:1.75rem; font-weight:800; font-family:'MaruBuri';}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr3 .bnr_sub .txt_p {}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr3 .bnr_sub .txt_p p {font-size:0.875rem; line-height:160%;}
+/* --------------------------------------------------------------------------------------------------------------------------10-2 광고배너4 시작*/
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 {background:url(../images/ad_bnr05.jpg) no-repeat center / cover; position:relative;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub {position:absolute; top:50px; left:30%; text-align:center;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub h1 {font-size:1.75rem; font-weight:600; color:#fff; margin-bottom:8px;} 
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub h2 {font-size:2.188rem; font-weight:600; color:#361A02; margin-bottom:30px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub .txt_sub {}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub .txt_sub .top {font-size:0.875rem; font-weight:600; margin-bottom:8px; letter-spacing:0.1px;}
+#wrap main .ad_bnr2 .swiper .swiper-wrapper .swiper-slide.bnr4 .bnr_sub .txt_sub .bottom {font-size:0.75rem; font-weight:600; letter-spacing:0.1px;}
+/* ------------------------------------------------------------------------------------------------------------------------------------------------11 풋터 시작*/
+footer {background:#F8F8F8; padding:0 100px 50px;}
+footer .footer_inenr {padding-top:50px;}
+footer .footer_inenr .company {}
+footer .footer_inenr .company img {width:206px; height:auto; margin-bottom:100px;}
+footer .footer_inenr .company .company_infor {display:flex; flex-direction:row; justify-content:space-between; align-items:flex-start; width:100%;}
+footer .footer_inenr .company .company_infor .infor_left {width:50%;}
+footer .footer_inenr .company .company_infor .left_top {margin-bottom:20px;}
+footer .footer_inenr .company .company_infor .left_top a {font-size:0.938rem; font-weight:600; margin-right:15px;}
+footer .footer_inenr .company .company_infor .left1,
+footer .footer_inenr .company .company_infor .left2,
+footer .footer_inenr .company .company_infor .left3 {display:flex; flex-direction:row; align-items:center; justify-content:flex-start; line-height:1.4;}
+footer .footer_inenr .company .company_infor .left1 p {margin:0 15px 10px 0; font-size:0.75rem;}
+footer .footer_inenr .company .company_infor .left1 p:nth-child(1),
+footer .footer_inenr .company .company_infor .left1 p:nth-child(2) {border-right:1px solid #575757; padding-right:8px;}
+footer .footer_inenr .company .company_infor .left2 {}
+footer .footer_inenr .company .company_infor .left2 p {font-size:0.75rem; margin:0 15px 8px 0;}
+footer .footer_inenr .company .company_infor .left2 p:nth-child(1),
+footer .footer_inenr .company .company_infor .left3 p:nth-child(1) {border-right:1px solid #575757; padding-right:8px;}
+footer .footer_inenr .company .company_infor .ab {font-size:0.75rem; margin-bottom:8px;}
+footer .footer_inenr .company .company_infor .left3 {}
+footer .footer_inenr .company .company_infor .left3 p {font-size:0.75rem; margin:0 15px 8px 0;}
+/* -------------------------------------------------------------------------------------------------------------------------------------------11-1 풋터 오른쪽 시작 */
+footer .footer_inenr .company .company_infor .infor_right {min-width:260px;}
+footer .footer_inenr .company .company_infor .infor_right .right_top {display:flex; flex-flow:row wrap; align-items:flex-start; margin-bottom:20px;}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_left {margin-right:30px;}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_left h1,
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_right h1,
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .global_lang h1,
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .sns_g h1 {font-size:1.25rem; font-weight:600; margin-bottom:20px;}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_left p {font-size:0.75; color:#aaa; margin-bottom:10px;}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_left button {
+    width:87px; height:29px; background:#361A02; color:#fff; font-size:0.75rem; padding:10px;
+    letter-spacing:0.2px; border-radius:5px;
+}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_right {display:flex; flex-flow:column wrap; align-items:flex-start;}
+footer .footer_inenr .company .company_infor .infor_right .right_top .top_right a {font-size:0.75rem; color:#aaa; margin-bottom:10px;}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom {display:flex; flex-flow:row wrap;}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .global_lang {margin-right:30px;}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .global_lang h1 {}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .global_lang .lang {
+    width:130px; height:48px; padding:0 15px; font-size:0.875rem;
+    background:url(../images/icon_bottom.png) no-repeat right 15px center;
+    background-size:12px;
+    border:1px solid #000;
+}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .global_lang .lang option {font-size:0.875rem; color:#ddd;}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .sns_g {}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .sns_g h1 {}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .sns_g a {}
+footer .footer_inenr .company .company_infor .infor_right .right_bottom .sns_g .sns1 {width:20px; height:auto; margin:0;}
